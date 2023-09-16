@@ -9,70 +9,15 @@ import SwiftUI
 import Combine
 
 struct KeyboardView: View {
-    @ObservedObject private var sizeState = SizeState()
-    @State private var keyStatus = KeyStatus.Normal
-    
-    private var spaceUnit: CGFloat = 2
+    @StateObject private var viewModel = KeyboardViewModel()
     
     public func update(_ size: CGSize, isLandscape: Bool) {
-        sizeState.update(width: size.width, isLandscape: isLandscape, interval: spaceUnit)
-    }
-    
-    private func KeyButton(_ text: String) -> some View {
-        Button(action: {
-            InputController.shared.input(text)
-        }, label: {
-            Text(text)
-                .foregroundColor(.white)
-        })
-        .frame(width: sizeState.width, height: sizeState.height)
-        .background(Color.black)
-        .cornerRadius(7.5)
-    }
-    
-    private func KeyButton(_ text1: String, _ text2: String, _ text3: String, _ text4: String) -> some View {
-        let text: String
-        
-        switch keyStatus {
-        case .Normal:
-            text = text1
-        case .Shifted:
-            text = text2
-        case .Number:
-            text = text3
-        case .Special:
-            text = text4
-        }
-        
-        return Button(action: {
-            InputController.shared.input(text)
-        }, label: {
-            Text(text)
-                .foregroundColor(.white)
-        })
-        .frame(width: sizeState.width, height: sizeState.height)
-        .background(Color.black)
-        .cornerRadius(7.5)
-    }
-    
-    private func SpecialButton(_ text: String, width: CGFloat = .nan, action: @escaping () -> Void) -> some View {
-        let button = Button(
-            action: action,
-            label: {
-                Text(text)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-            })
-            .frame(height: sizeState.height)
-            .background(Color.black)
-            .cornerRadius(7.5)
-        
-        return button.modifier(SpecialButtonWidthModifier(width: width))
+        viewModel.update(size, isLandscape: isLandscape)
     }
     
     var body: some View {
-        VStack(spacing: spaceUnit) {
-            HStack(spacing: spaceUnit) {
+        VStack(spacing: viewModel.spaceUnit) {
+            HStack(spacing: viewModel.spaceUnit) {
                 KeyButton("ㅂ", "ㅃ", "1", "!")
                 KeyButton("ㅈ", "ㅉ", "2", "@")
                 KeyButton("ㄷ", "ㅉ", "3", "#")
@@ -85,7 +30,7 @@ struct KeyboardView: View {
                 KeyButton("ㅔ", "ㅉ", "2", "@")
             }
             
-            HStack(spacing: spaceUnit) {
+            HStack(spacing: viewModel.spaceUnit) {
                 KeyButton("ㅁ", "ㅁ", "-", "{")
                 KeyButton("ㄴ", "ㄴ", "_", "}")
                 KeyButton("ㅇ", "ㅇ", "=", "[")
@@ -97,7 +42,7 @@ struct KeyboardView: View {
                 KeyButton("ㅣ", "ㅣ", ";", ":")
             }
             
-            HStack(spacing: spaceUnit) {
+            HStack(spacing: viewModel.spaceUnit) {
                 SpecialButton("⇧") {
                     keyStatus.toggleShift()
                 }
@@ -113,7 +58,7 @@ struct KeyboardView: View {
                 }
             }
             
-            HStack(spacing: spaceUnit) {
+            HStack(spacing: viewModel.spaceUnit) {
                 SpecialButton("123", width: sizeState.width * 2) {
                     keyStatus.toggleNumber()
                 }
@@ -124,6 +69,7 @@ struct KeyboardView: View {
                 SpecialButton("이동", width: sizeState.width * 2) {
                     
                 }
+                viewModel.keyButton.draw()
             }
             
         }
@@ -142,21 +88,6 @@ struct KeyboardView_Previews: PreviewProvider {
     }
 }
 
-class SizeState: ObservableObject {
-    @Published var width: CGFloat = 0
-    @Published var height: CGFloat = 0
-    
-    func update(width: CGFloat, isLandscape: Bool, interval: CGFloat) {
-        self.width = width / 10 - interval
-        
-        if isLandscape {
-            height = self.width * 0.5
-        } else {
-            height = self.width
-        }
-    }
-}
-
 private struct SpecialButtonWidthModifier: ViewModifier {
     let width: CGFloat
 
@@ -165,32 +96,6 @@ private struct SpecialButtonWidthModifier: ViewModifier {
             return AnyView(content.frame(maxWidth: .infinity))
         } else {
             return AnyView(content.frame(width: width))
-        }
-    }
-}
-
-private enum KeyStatus {
-    case Normal, Shifted, Number, Special
-    
-    mutating func toggleShift() {
-        switch self {
-        case .Normal:
-            self = .Shifted
-        case .Shifted:
-            self = .Normal
-        case .Number:
-            self = .Special
-        case .Special:
-            self = .Number
-        }
-    }
-    
-    mutating func toggleNumber() {
-        switch self {
-        case .Normal, .Shifted:
-            self = .Number
-        case .Number, .Special:
-            self = .Normal
         }
     }
 }

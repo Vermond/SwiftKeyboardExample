@@ -10,6 +10,10 @@
 		7400F3432AA5FAB1003CB8BA /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7400F3422AA5FAB1003CB8BA /* PickerTextField.swift */; };
 		7400F3452AA5FDA1003CB8BA /* PickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7400F3442AA5FDA1003CB8BA /* PickerField.swift */; };
 		74056A2B29F7911E0037A262 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74056A2929F7911E0037A262 /* InputController.swift */; };
+		741DBEDA2AB407D200A3C665 /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741DBED92AB407D200A3C665 /* KeyboardViewModel.swift */; };
+		741DBEDB2AB407D200A3C665 /* KeyboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741DBED92AB407D200A3C665 /* KeyboardViewModel.swift */; };
+		741DBEE32AB40F3100A3C665 /* KeyboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741DBEE22AB40F3100A3C665 /* KeyboardData.swift */; };
+		741DBEE42AB40F3100A3C665 /* KeyboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741DBEE22AB40F3100A3C665 /* KeyboardData.swift */; };
 		7473FF5929F68D0400F2F058 /* SwiftKeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7473FF5829F68D0400F2F058 /* SwiftKeyboardApp.swift */; };
 		7473FF5B29F68D0400F2F058 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7473FF5A29F68D0400F2F058 /* ContentView.swift */; };
 		7473FF5D29F68D0600F2F058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7473FF5C29F68D0600F2F058 /* Assets.xcassets */; };
@@ -20,6 +24,8 @@
 		ED08B7EB2A0D16AC00A6BACB /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7473FF8D29F759CB00F2F058 /* KeyboardView.swift */; };
 		ED08B7EC2A0D16B100A6BACB /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74056A2929F7911E0037A262 /* InputController.swift */; };
 		ED08B7EE2A0D16B600A6BACB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7473FF7C29F6906900F2F058 /* KeyboardViewController.swift */; };
+		ED89EF062AB5643000F152F1 /* InputControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89EF052AB5643000F152F1 /* InputControllerData.swift */; };
+		ED89EF072AB5643000F152F1 /* InputControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED89EF052AB5643000F152F1 /* InputControllerData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,8 @@
 		7400F3442AA5FDA1003CB8BA /* PickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerField.swift; sourceTree = "<group>"; };
 		74056A2929F7911E0037A262 /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
 		740AFCB829F798C700C91FF1 /* CombineKorean.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CombineKorean.md; sourceTree = "<group>"; };
+		741DBED92AB407D200A3C665 /* KeyboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewModel.swift; sourceTree = "<group>"; };
+		741DBEE22AB40F3100A3C665 /* KeyboardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardData.swift; sourceTree = "<group>"; };
 		7473FF5529F68D0400F2F058 /* KeyboardExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7473FF5829F68D0400F2F058 /* SwiftKeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftKeyboardApp.swift; sourceTree = "<group>"; };
 		7473FF5A29F68D0400F2F058 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +68,7 @@
 		7473FF7C29F6906900F2F058 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		7473FF7E29F6906900F2F058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7473FF8D29F759CB00F2F058 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		ED89EF052AB5643000F152F1 /* InputControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputControllerData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				74056A2929F7911E0037A262 /* InputController.swift */,
+				ED89EF052AB5643000F152F1 /* InputControllerData.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -103,6 +113,47 @@
 				740AFCB829F798C700C91FF1 /* CombineKorean.md */,
 			);
 			path = Docs;
+			sourceTree = "<group>";
+		};
+		741DBEDC2AB40C5400A3C665 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7473FF8D29F759CB00F2F058 /* KeyboardView.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		741DBEDE2AB40D4900A3C665 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7473FF7C29F6906900F2F058 /* KeyboardViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		741DBEDF2AB40D6100A3C665 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				741DBEE02AB40D7E00A3C665 /* Keyboard */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		741DBEE02AB40D7E00A3C665 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				741DBEE22AB40F3100A3C665 /* KeyboardData.swift */,
+				741DBEE12AB40F1800A3C665 /* Data */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		741DBEE12AB40F1800A3C665 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				741DBED92AB407D200A3C665 /* KeyboardViewModel.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		7473FF4C29F68D0400F2F058 = {
@@ -147,10 +198,11 @@
 		7473FF7B29F6906900F2F058 /* KeyboardExtension */ = {
 			isa = PBXGroup;
 			children = (
-				74056A2829F790FB0037A262 /* Controller */,
-				7473FF9029F75A0F00F2F058 /* View */,
-				7473FF7C29F6906900F2F058 /* KeyboardViewController.swift */,
 				7473FF7E29F6906900F2F058 /* Info.plist */,
+				74056A2829F790FB0037A262 /* Controller */,
+				741DBEDE2AB40D4900A3C665 /* ViewController */,
+				7473FF9029F75A0F00F2F058 /* View */,
+				741DBEDF2AB40D6100A3C665 /* ViewModel */,
 			);
 			path = KeyboardExtension;
 			sourceTree = "<group>";
@@ -158,7 +210,7 @@
 		7473FF9029F75A0F00F2F058 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7473FF8D29F759CB00F2F058 /* KeyboardView.swift */,
+				741DBEDC2AB40C5400A3C665 /* Keyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,8 +328,11 @@
 				ED08B7EC2A0D16B100A6BACB /* InputController.swift in Sources */,
 				ED08B7EE2A0D16B600A6BACB /* KeyboardViewController.swift in Sources */,
 				7400F3452AA5FDA1003CB8BA /* PickerField.swift in Sources */,
+				741DBEE32AB40F3100A3C665 /* KeyboardData.swift in Sources */,
 				7473FF5929F68D0400F2F058 /* SwiftKeyboardApp.swift in Sources */,
 				7400F3432AA5FAB1003CB8BA /* PickerTextField.swift in Sources */,
+				ED89EF062AB5643000F152F1 /* InputControllerData.swift in Sources */,
+				741DBEDA2AB407D200A3C665 /* KeyboardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,9 +340,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED89EF072AB5643000F152F1 /* InputControllerData.swift in Sources */,
+				741DBEE42AB40F3100A3C665 /* KeyboardData.swift in Sources */,
 				7473FF8F29F759CB00F2F058 /* KeyboardView.swift in Sources */,
 				74056A2B29F7911E0037A262 /* InputController.swift in Sources */,
 				7473FF7D29F6906900F2F058 /* KeyboardViewController.swift in Sources */,
+				741DBEDB2AB407D200A3C665 /* KeyboardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

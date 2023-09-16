@@ -48,8 +48,7 @@ class PickerTextField: UITextField {
         let doneButton = UIBarButtonItem(title: "Done",
                                          style: .done,
                                          target: self,
-                                         action: #selector(donePressed)
-        )
+                                         action: #selector(donePressed))
         
         tb.setItems([space, doneButton], animated: false)
         tb.sizeToFit()
