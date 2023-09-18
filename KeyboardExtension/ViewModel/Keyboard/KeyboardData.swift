@@ -57,6 +57,11 @@ class KeyButtonList: Hashable {
     }
 }
 
+fileprivate let defaultForeColor = Color.white
+fileprivate let defaultBackColor = Color.black
+fileprivate let defaultMag = CGFloat(1)
+fileprivate let defaultRadius = CGFloat(7.5)
+
 struct KeyButton: View, Hashable {
     let id = UUID()
     private var keyDic: [KeyStatus: String] = [:]
@@ -71,12 +76,7 @@ struct KeyButton: View, Hashable {
     private var isFunctional = false
     private var action: ViewModelFunction?
     
-    private var status: KeyStatus { viewModel.currentStatus }
-    
-    private static let defaultForeColor = Color.white
-    private static let defaultBackColor = Color.black
-    private static let defaultMag = CGFloat(1)
-    private static let defaultRadius = CGFloat(7.5)
+    private var status: KeyStatus { viewModel.currentStatus }    
     
     private lazy var defaultAction: ViewModelFunction = { [self] _ in
         if let key = keyDic[status] {
