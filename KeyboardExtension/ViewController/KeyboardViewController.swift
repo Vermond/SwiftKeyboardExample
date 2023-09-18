@@ -9,7 +9,6 @@ import SwiftUI
 
 class KeyboardViewController: UIInputViewController {
     private var customView: KeyboardView!
-    private var isUpdateDone = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,28 +41,15 @@ class KeyboardViewController: UIInputViewController {
         InputController.shared.clearInputVC()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewLayoutMarginsDidChange() {
+        super.viewLayoutMarginsDidChange()
         
-        isUpdateDone = false
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-        isUpdateDone = false
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        
-        if !isUpdateDone, let size = self.inputView?.layoutMarginsGuide.layoutFrame.size {
-            isUpdateDone = true
-            customView.update(size, isLandscape: isLandscape())
+        if let size = self.inputView?.layoutMarginsGuide.layoutFrame.size {
+            customView.deviceInfoSubject.send((size, isLandscape))
         }
     }
     
-    private func isLandscape() -> Bool {
+    private var isLandscape: Bool {
         return UIScreen.main.bounds.width > UIScreen.main.bounds.height
     }
 }

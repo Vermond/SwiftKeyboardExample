@@ -21,12 +21,6 @@ class InputController {
     internal let letterMoStart: UInt32 = 0x314F //ㅏ
     internal let letterMoEnd: UInt32 = 0x3163 //ㅣ
     
-    private var currentStatus: KeyStatus = .Normal
-    public var status: KeyStatus {
-        get { return currentStatus }
-        set { currentStatus = newValue }
-    }
-    
     private var currentInputVC: UIInputViewController?
     public func setInputVC(_ vc: UIInputViewController) {
         self.currentInputVC = vc
@@ -37,14 +31,6 @@ class InputController {
     
     private var proxy: UITextDocumentProxy? {
         currentInputVC?.textDocumentProxy
-    }
-    
-    public func toggleNumber() {
-        self.currentStatus = currentStatus.toggleNumber()
-    }
-    
-    public func toggleShift() {
-        self.currentStatus = currentStatus.toggleShift()
     }
     
     public func input(_ text: String) {
