@@ -8,6 +8,9 @@
 import SwiftUI
 import Foundation
 
+fileprivate let defaultSpace = CGFloat(2)
+fileprivate let defaultBackColor = Color.gray
+
 class KeyboardViewModel: ObservableObject {
     @Published var spaceUnit: CGFloat
     @Published var entireBackgroundColor: Color
@@ -16,8 +19,6 @@ class KeyboardViewModel: ObservableObject {
     
     private var keyButtonList: [KeyButtonList] = []
     
-    private static let defaultSpace = CGFloat(2)
-    private static let defaultBackColor = Color.gray
     
     init(spaceUnit: CGFloat = defaultSpace, backColor: Color = defaultBackColor) {
         self.spaceUnit = spaceUnit
