@@ -142,7 +142,7 @@
 		741DBEE02AB40D7E00A3C665 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				741DBEE22AB40F3100A3C665 /* KeyboardData.swift */,
+				741DBED92AB407D200A3C665 /* KeyboardViewModel.swift */,
 				741DBEE12AB40F1800A3C665 /* Data */,
 			);
 			path = Keyboard;
@@ -151,7 +151,7 @@
 		741DBEE12AB40F1800A3C665 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				741DBED92AB407D200A3C665 /* KeyboardViewModel.swift */,
+				741DBEE22AB40F3100A3C665 /* KeyboardData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
