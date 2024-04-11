@@ -1,0 +1,134 @@
+{
+    "name": "NUMample",
+    "space": 5,
+    "backColor": "#fff000",
+    "buttonColor": "#0fff00",
+    "textColor": "#000fff",
+    "round": 10,
+    "rows": [
+        {
+            "keys": [
+                {
+                    "mainText": "1",
+                },
+                {
+                    "mainText": "2",
+                },
+                {
+                    "mainText": "3",
+                },
+                {
+                    "mainText": "4",
+                },
+                {
+                    "mainText": "5",
+                },
+                {
+                    "mainText": "6",
+                },
+                {
+                    "mainText": "7",
+                },
+                {
+                    "mainText": "8",
+                },
+                {
+                    "mainText": "9",
+                },
+                {
+                    "mainText": "0",
+                },
+            ]
+        },
+        {
+            "keys": [
+                {
+                    "mainText": "-",
+                },
+                {
+                    "mainText": "/",
+                },
+                {
+                    "mainText": ":",
+                },
+                {
+                    "mainText": ";",
+                },
+                {
+                    "mainText": "(",
+                },
+                {
+                    "mainText": ")",
+                },
+                {
+                    "mainText": "\\",
+                },
+                {
+                    "mainText": "&",
+                },
+                {
+                    "mainText": "@",
+                },
+                {
+                    "mainText": "\"",
+                },
+            ]
+        },
+        {
+            "keys": [
+                {
+                    "mainText": "#+=",
+                    "keyAction": "changeKeyboard:SPCample",
+                },
+                {
+                    "mainText": "",
+                    "width": 0.5,
+                    "keyAction": "blank",
+                    "backColor": "#00000000"
+                },
+                {
+                    "mainText": ".",
+                },
+                {
+                    "mainText": ",",
+                },
+                {
+                    "mainText": "?",
+                },
+                {
+                    "mainText": "!",
+                },
+                {
+                    "mainText": "`",
+                },
+                {
+                    "mainText": "",
+                    "width": 0.5,
+                    "keyAction": "blank",
+                    "backColor": "#00000000"
+                },
+                {
+                    "mainText": "<-",
+                    "keyAction": "removeChar",
+                },
+            ]
+        },
+        {
+            "keys": [
+                {
+                    "mainText": "⌨",
+                    "keyAction": "changeKeyboard:reserved",
+                },
+                {
+                    "mainText": "space",
+                    "width": 3.5,
+                    "keyAction": "input: "
+                },
+                {
+                    "mainText": "go",
+                    "keyAction": "input:\n"
+                },
+            ]
+        },
+    ]
+}

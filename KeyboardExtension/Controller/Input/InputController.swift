@@ -22,7 +22,8 @@ class InputController {
     internal let letterMoEnd: UInt32 = 0x3163 //ㅣ
     
     private var currentInputVC: UIInputViewController?
-    public func setInputVC(_ vc: UIInputViewController) {
+    
+    public func setInputVC(_ vc: UIInputViewController?) {
         self.currentInputVC = vc
     }
     public func clearInputVC() {
@@ -39,7 +40,7 @@ class InputController {
         var edited = false
                 
         let beforeText = proxy.documentContextBeforeInput ?? ""
-        let afterText = proxy.documentContextAfterInput ?? ""
+//        let afterText = proxy.documentContextAfterInput ?? ""
         
         guard let lastText = beforeText.last else {
             proxy.insertText(text)
