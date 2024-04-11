@@ -1,0 +1,157 @@
+{
+    "name": "ENGample",
+    "space": 5,
+    "backColor": "#ff0000",
+    "buttonColor": "#00ff00",
+    "textColor": "#0000ff",
+    "round": 10,
+    "reservedName": "ENGample",
+    "rows": [
+        {
+            "keys": [
+                {
+                    "mainText": "Q",
+                },
+                {
+                    "mainText": "W",
+                },
+                {
+                    "mainText": "E",
+                },
+                {
+                    "mainText": "R",
+                },
+                {
+                    "mainText": "T",
+                },
+                {
+                    "mainText": "Y",
+                },
+                {
+                    "mainText": "U",
+                },
+                {
+                    "mainText": "I",
+                },
+                {
+                    "mainText": "O",
+                },
+                {
+                    "mainText": "P",
+                },
+            ]
+        },
+        {
+            "keys": [
+                {
+                    "mainText": "",
+                    "width": 0.5,
+                    "keyAction": "blank",
+                    "backColor": "#00000000"
+                },
+                {
+                    "mainText": "A",
+                },
+                {
+                    "mainText": "S",
+                },
+                {
+                    "mainText": "D",
+                },
+                {
+                    "mainText": "F",
+                },
+                {
+                    "mainText": "G",
+                },
+                {
+                    "mainText": "H",
+                },
+                {
+                    "mainText": "J",
+                },
+                {
+                    "mainText": "K",
+                },
+                {
+                    "mainText": "L",
+                },
+                {
+                    "mainText": "",
+                    "width": 0.5,
+                    "keyAction": "blank",
+                    "backColor": "#00000000"
+                },
+            ]
+        },
+        {
+            "keys": [
+                {
+                    "mainText": "↑",
+                    "keyAction": "changeKeyboard:ENGample",
+                },
+                {
+                    "mainText": "",
+                    "width": 0.5,
+                    "keyAction": "blank",
+                    "backColor": "#00000000"
+                },
+                {
+                    "mainText": "Z",
+                },
+                {
+                    "mainText": "X",
+                },
+                {
+                    "mainText": "C",
+                },
+                {
+                    "mainText": "V",
+                },
+                {
+                    "mainText": "B",
+                },
+                {
+                    "mainText": "N",
+                },
+                {
+                    "mainText": "M",
+                },
+                {
+                    "mainText": "",
+                    "width": 0.5,
+                    "keyAction": "blank",
+                    "backColor": "#00000000"
+                },
+                {
+                    "mainText": "<-",
+                    "keyAction": "removeChar",
+                },
+            ]
+        },
+        {
+            "keys": [
+                {
+                    "mainText": "123",
+                    "keyAction": "changeKeyboard:NUMample",
+                },
+                {
+                    "mainText": "⌨",
+                    "keyAction": "changeKeyboard:KORample"
+                },
+                {
+                    "mainText": "space",
+                    "width": 3.5,
+                    "keyAction": "input: "
+                },
+                {
+                    "mainText": ".",
+                },
+                {
+                    "mainText": "go",
+                    "keyAction": "input:\n"
+                },
+            ]
+        },
+    ]
+}

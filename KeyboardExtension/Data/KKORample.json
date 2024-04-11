@@ -1,0 +1,142 @@
+{
+    "name": "KKORample",
+    "space": 5,
+    "backColor": "#fff000",
+    "buttonColor": "#0fff00",
+    "textColor": "#000fff",
+    "round": 10,
+    "reservedName": "KORample",
+    "rows": [
+        {
+            "keys": [
+                {
+                    "mainText": "ㅃ",
+                },
+                {
+                    "mainText": "ㅉ",
+                },
+                {
+                    "mainText": "ㄸ",
+                },
+                {
+                    "mainText": "ㄲ",
+                },
+                {
+                    "mainText": "ㅆ",
+                },
+                {
+                    "mainText": "ㅛ",
+                },
+                {
+                    "mainText": "ㅕ",
+                },
+                {
+                    "mainText": "ㅑ",
+                },
+                {
+                    "mainText": "ㅒ",
+                },
+                {
+                    "mainText": "ㅖ",
+                },
+            ]
+        },
+        {
+            "keys": [
+                {
+                    "mainText": "ㅁ",
+                },
+                {
+                    "mainText": "ㄴ",
+                },
+                {
+                    "mainText": "ㅇ",
+                },
+                {
+                    "mainText": "ㄹ",
+                },
+                {
+                    "mainText": "ㅎ",
+                },
+                {
+                    "mainText": "ㅗ",
+                },
+                {
+                    "mainText": "ㅓ",
+                },
+                {
+                    "mainText": "ㅏ",
+                },
+                {
+                    "mainText": "ㅣ",
+                }
+            ]
+        },
+        {
+            "keys": [
+                {
+                    "mainText": "↑",
+                    "keyAction": "changeKeyboard:KORample",
+                },
+                {
+                    "mainText": "",
+                    "width": 0.5,
+                    "keyAction": "blank",
+                    "backColor": "#00000000"
+                },
+                {
+                    "mainText": "ㅋ",
+                },
+                {
+                    "mainText": "ㅌ",
+                },
+                {
+                    "mainText": "ㅊ",
+                },
+                {
+                    "mainText": "ㅍ",
+                },
+                {
+                    "mainText": "ㅠ",
+                },
+                {
+                    "mainText": "ㅜ",
+                },
+                {
+                    "mainText": "ㅡ",
+                },
+                {
+                    "mainText": "",
+                    "width": 0.5,
+                    "keyAction": "blank",
+                    "backColor": "#00000000"
+                },
+                {
+                    "mainText": "<-",
+                    "keyAction": "removeChar",
+                },
+            ]
+        },
+        {
+            "keys": [
+                {
+                    "mainText": "123",
+                    "keyAction": "changeKeyboard:NUMample"
+                },
+                {
+                    "mainText": "⌨",
+                    "keyAction": "changeKeyboard:ENGample"
+                },
+                {
+                    "mainText": "스페이스",
+                    "width": 3.5,
+                    "keyAction": "input: "
+                },
+                {
+                    "mainText": "줄바꿈",
+                    "keyAction": "input:\n"
+                },
+            ]
+        },
+    ]
+}
