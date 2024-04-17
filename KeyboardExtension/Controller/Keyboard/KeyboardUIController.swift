@@ -69,13 +69,10 @@ class KeyboardUIController {
                 switch event {
                 case .willAppear(let size):
                     self?.update(screenSize: size)
-                    break
                 case .didAppear(let size):
                     self?.updateOrientation(size: size)
-                    break
                 case .willTransition(let size):
                     self?.updateOrientation(size: size)
-                    break
                 default:
                     break
                 }
@@ -89,7 +86,6 @@ class KeyboardUIController {
                 switch event {
                 case .keyInput:
                     self?.reduceCount()
-                    break
 //                default:
 //                    break
                 }
