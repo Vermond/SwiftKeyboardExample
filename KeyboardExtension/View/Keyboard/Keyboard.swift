@@ -69,13 +69,10 @@ extension Keyboard {
                     switch event {
                     case .backColorChanged(let newValue, _):
                         self?.update(backColor: newValue)
-                        break
                     case .spaceChanged(let space):
                         self?.update(space: space)
-                        break
                     case .areaSizeChanged(let size):
                         self?.update(size: size)
-                        break
                     default:
                         break
                     }

@@ -68,7 +68,6 @@ class KeyboardInputViewController: UIInputViewController {
                 switch event {
                 case .loaded(let data):
                     self?.setHostingController(data: data)
-                    break
                 default:
                     break
                 }

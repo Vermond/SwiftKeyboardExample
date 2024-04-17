@@ -71,15 +71,12 @@ extension KeyButton {
                     switch event {
                     case .buttonColorChanged(let newValue, let isOverwrite):
                         self?.update(backColor: newValue, isOverwrite: isOverwrite)
-                        break
                     case .textColorChanged(let newValue, let isOverwrite):
                         self?.update(charColor: newValue, isOverwrite: isOverwrite)
-                        break
                     case .keySizeChanged(let sizeInfo):
                         if let id = self?.id, sizeInfo.id == id {
                             self?.update(width: sizeInfo.width, height: sizeInfo.height)
                         }
-                        break
                     case .roundChanged(let round):
                         self?.update(round: round)
                     default:

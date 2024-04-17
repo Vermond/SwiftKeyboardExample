@@ -70,10 +70,8 @@ extension KeyRow {
                                 KeyboardUIEventMediator.shared.sendEvent(.keySizeChanged(sizeInfo: info))
                             }
                         }
-                        break
                     case .spaceChanged(let space):
                         self?.update(space: space)
-                        break
                     default:
                         break
                     }
