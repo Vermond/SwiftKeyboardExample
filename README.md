@@ -1,7 +1,7 @@
 # SwiftKeyboardExample
 Custom keyboard using swift ui
 
-** If you change branch to develop, you may see latest codes
+** See develop branch for latest code
 
 App Screen
 - Normal Text input field
@@ -12,13 +12,9 @@ Custom Keyboard
 - Can combine jamo
 
 Applied pattern/libs
-- MVVM pattern (to Some views needs view model)
+- MVVM pattern (for keyboard state management)
 - Singleton pattern (to controller only one exists)
 - Combine library (to controller many times init and deinit)
 
 
-Detailed history is on my gitlab private project. If you want to check those things, mail to me.
-
-paser2@gmail.com
-
-
+Detailed logs are on a private repo. Contact for access if needed.
